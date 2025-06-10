@@ -1,0 +1,42 @@
+{
+  "name": "Venkata Nikhil Nandyala",
+  "title": "Cloud Solutions Architect",
+  "email": "nndevunix@gmail.com",
+  "about": "Experienced Azure Architect with 8+ years designing secure, scalable cloud infrastructures. Passionate about automation, networking, and DevOps excellence.",
+  "skills": [
+    "Azure",
+    "Terraform",
+    "PowerShell",
+    "App Gateway",
+    "Intune",
+    "Kubernetes",
+    "Virtual WAN",
+    "NSG",
+    "ARM/Bicep",
+    "CI/CD"
+  ],
+  "projects": [
+    {
+      "title": "SPY Options Predictor",
+      "description": "Built an ML model using XGBoost and LSTM deployed in Azure Kubernetes Service. Predicts SPY drops with >85% accuracy."
+    },
+    {
+      "title": "Azure Inventory Dashboard",
+      "description": "Full-stack app that pulls all services from 20+ subscriptions and renders network architecture diagrams per subscription."
+    },
+    {
+      "title": "Load Balancer Upgrade Automation",
+      "description": "Scripted upgrade of Basic to Standard SKU LBs using PowerShell across production regions, reducing downtime risk to zero."
+    }
+  ],
+  "testimonials": [
+    {
+      "quote": "Nikhil is one of the most reliable Azure architects I’ve worked with. His ability to quickly troubleshoot and redesign network flows saved our team weeks of effort.",
+      "author": "Senior DevOps Engineer, Calpine"
+    },
+    {
+      "quote": "Venkata’s automation-first mindset transformed our deployment process. His PowerShell scripts and Terraform blueprints are now the standard for our cloud infrastructure.",
+      "author": "Cloud Operations Manager, XYZ Solutions"
+    }
+  ]
+}
