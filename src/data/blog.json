@@ -1,0 +1,16 @@
+[
+  {
+    "slug": "2025-06-azure-networking",
+    "title": "Azure Networking Deep Dive",
+    "date": "2025-06-09",
+    "summary": "Explore key elements of Azure network architecture including VWAN, NSGs, routing and security design.",
+    "content": "## Azure Networking Deep Dive\n\nThis post explores advanced Azure networking topics:\n\n- Virtual WAN setup\n- Routing weight conflicts\n- Hub-spoke model with Azure Firewall\n- NSG rules and diagnostics\n\n_Nikhil shares his real-world troubleshooting from complex enterprise networks._"
+  },
+  {
+    "slug": "sample",
+    "title": "Getting Started with Cloud Automation",
+    "date": "2025-06-09",
+    "summary": "Best practices on scripting Azure infrastructure using PowerShell and Terraform.",
+    "content": "## Getting Started with Cloud Automation\n\nThis blog introduces infrastructure as code for Azure:\n\n- Using PowerShell to automate Azure VM setup\n- Upgrading Public IPs (Basic to Standard)\n- Terraform tips for vHub and Load Balancer migration\n\n_Focus on practical, script-driven DevOps for Azure Cloud._"
+  }
+]
