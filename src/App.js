@@ -1,5 +1,5 @@
 import React from "react";
-import content from "../data/content.json";
+import content from "./data/content.json";
 import { motion } from "framer-motion";
 
 export default function HomePage() {
