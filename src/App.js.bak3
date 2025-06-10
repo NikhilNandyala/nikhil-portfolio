@@ -1,11 +1,9 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import content from "./data/content.json";
 import { motion } from "framer-motion";
 import BlogList from "./components/BlogList";
-import BlogPost from "./components/BlogPost";
 
-function HomePage() {
+export default function HomePage() {
   return (
     <div className="min-h-screen bg-gray-50 text-gray-800">
       <header className="flex flex-col items-center justify-center py-16 bg-white shadow">
@@ -56,7 +54,7 @@ function HomePage() {
           </div>
         </section>
 
-        <section id="projects" className="mb-12">
+OAOAOA        <section id="projects" className="mb-12">
           <h2 className="text-2xl font-semibold mb-4">Projects</h2>
           <div className="space-y-6">
             {content.projects.map((project, index) => (
@@ -69,7 +67,7 @@ function HomePage() {
         </section>
 
         <section id="testimonials" className="mb-12">
-          <h2 className="text-2xl font-semibold mb-4">Testimonials</h2>
+OAOAOA          <h2 className="text-2xl font-semibold mb-4">Testimonials</h2>
           <div className="space-y-6">
             {content.testimonials.map((testimonial, index) => (
               <blockquote
@@ -77,14 +75,14 @@ function HomePage() {
                 className="bg-white p-6 rounded-xl shadow-md"
               >
                 <p className="italic text-gray-700">"{testimonial.quote}"</p>
-                <footer className="mt-2 text-sm text-gray-500">– {testimonial.author}</footer>
+OAOAOA                <footer className="mt-2 text-sm text-gray-500">– {testimonial.author}</footer>
               </blockquote>
             ))}
           </div>
         </section>
 
         <BlogList />
-      </main>
+OAOAOA      </main>
 
       <footer id="contact" className="text-center text-sm text-gray-500 py-8">
         <p>
@@ -95,17 +93,4 @@ function HomePage() {
     </div>
   );
 }
-
-function App() {
-  return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/blog/:slug" element={<BlogPost />} />
-      </Routes>
-    </Router>
-  );
-}
-
-export default App;
 
