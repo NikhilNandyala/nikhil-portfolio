@@ -7,20 +7,20 @@ export default function BlogList() {
 
   useEffect(() => {
     async function loadPosts() {
-      const files = require
-        .context("../blog", false, /\.md$/)
-        .keys()
-        .map((filename) => {
-          const file = require(`../blog/${filename.replace("./", "")}`);
-          const slug = filename.replace("./", "").replace(".md", "");
-          const { data } = matter(file.default);
-          return {
-            slug,
-            title: data.title,
-            date: data.date,
-            summary: data.summary,
-          };
-        });
+    const files = require
+      .context("../blog", false, /\.md$/)
+      .keys()
+      .map((filename) => {
+       const file = require(`!!raw-loader!../blog/${filename.replace("./", "")}`).default;
+       const slug = filename.replace("./", "").replace(".md", "");
+       const { data } = matter(file);
+       return {
+          slug,
+          title: data.title,
+          date: data.date,
+          summary: data.summary,
+    };
+  });
 
       setPosts(files);
     }
