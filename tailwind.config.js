@@ -21,7 +21,8 @@ module.exports = {
         }
       },
       backgroundImage: {
-        'hero-pattern': "linear-gradient(to right, #e0f2fe, #fff)"
+        'hero-pattern': "linear-gradient(to right, #e0f2fe, #fff)",
+        'code-bg': "url('/pexels-goumbik-574071.jpg')"  // 🌠 added your background image
       }
     }
   },
