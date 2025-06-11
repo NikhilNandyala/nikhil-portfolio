@@ -1,26 +1,29 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./src/**/*.{js,jsx,ts,tsx}", // ✅ Tell Tailwind where to scan for class usage
+    "./src/**/*.{js,jsx,ts,tsx}",
     "./public/index.html"
   ],
   theme: {
     extend: {
       colors: {
-        primary: "#1E40AF", // Tailored blue
-        accent: "#F59E0B",  // Amber/gold
+        primary: "#1E40AF",
+        accent: "#F59E0B",
+        background: "#F9FAFB"
       },
       animation: {
-        fadeIn: "fadeIn 1s ease-out",
+        fadeIn: "fadeIn 1s ease-out"
       },
       keyframes: {
         fadeIn: {
           "0%": { opacity: 0 },
-          "100%": { opacity: 1 },
-        },
+          "100%": { opacity: 1 }
+        }
       },
-    },
+      backgroundImage: {
+        'hero-pattern': "linear-gradient(to right, #e0f2fe, #fff)"
+      }
+    }
   },
-  plugins: [],
+  plugins: []
 };
-
