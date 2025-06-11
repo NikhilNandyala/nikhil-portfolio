@@ -1,4 +1,19 @@
 [
+{
+  "title": "SRE vs DevOps: A Side-by-Side Comparison",
+  "author": "Nikhil",
+  "date": "2025-06-11",
+  "tags": [
+    "SRE",
+    "DevOps",
+    "Cloud",
+    "Engineering",
+    "Automation"
+  ],
+  "summary": "Explore the key differences and similarities between Site Reliability Engineering (SRE) and DevOps through a clear side-by-side comparison of their tools and responsibilities.",
+  "content": "\n## SRE vs DevOps: A Side-by-Side Comparison\n\nIn today\u2019s fast-paced engineering environments, two practices stand out when it comes to building scalable and reliable systems: **DevOps** and **Site Reliability Engineering (SRE)**. While they share some goals and tools, their philosophies and focuses can differ significantly.\n\nHere\u2019s a clear comparison to help you understand both roles and how they align with your organization\u2019s needs:\n\n### \ud83e\uddf0 Tooling & Focus Areas\n\n| Category                           | DevOps Engineer Tools                            | SRE (Site Reliability Engineer) Tools             |\n|------------------------------------|--------------------------------------------------|--------------------------------------------------|\n| **Linux Administration**           | CLI or GUI tools                                 | CLI and GUI tools                                |\n| **Scripting**                      | Bash, Python                                     | Bash, Python                                     |\n| **Cloud Platforms**                | AWS, Azure, GCP for Cloud                        | AWS, Azure, GCP for Cloud                        |\n| **Infrastructure as Code (IaC)**   | Terraform, CloudFormation, Ansible               | Terraform, CloudFormation, Ansible               |\n| **CI/CD**                          | Jenkins, GitLab, CircleCI                        | *(Primarily handled by DevOps)*                  |\n| **Containerization**              | Docker, Kubernetes                               | *(Used as part of deployment stack)*             |\n| **Configuration Management**       | *(Often included in IaC tools)*                  | Terraform, CloudFormation, Ansible               |\n| **Monitoring & Observability**     | *(Basic tools depending on use case)*            | New Relic, DataDog, Kibana, Grafana              |\n| **Incident Response**              | *(Usually integrates with ops teams)*            | Opsgenie, VictorOps (Splunk On-call), PagerDuty  |\n\n### \ud83c\udfaf Key Philosophical Differences\n\n- **DevOps** emphasizes **collaboration** between development and operations teams to deliver code faster and more reliably.\n- **SRE** applies a **software engineering approach** to IT operations with a focus on system reliability, automation, and scalability.\n\n### \ud83d\udcdd Final Thoughts\n\nDevOps and SRE are not competitors \u2014 they are **complementary disciplines**. Organizations benefit most when both practices work together to foster rapid delivery and robust reliability.\n\n---\n*Originally published on [clickittech.com](https://www.clickittech.com).*\n"
+}
+  
   {
     "slug": "2025-06-azure-networking",
     "title": "Azure Networking Deep Dive",
