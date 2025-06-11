@@ -13,7 +13,7 @@ function HomePage() {
       <div className="bg-black bg-opacity-60 min-h-screen">
         <header className="flex flex-col items-center justify-center py-16 shadow">
           <img
-            src="//public/profile.jpg"
+            src="/public/profile.jpg"
             alt={content.name}
             className="w-32 h-32 rounded-full object-cover border-4 border-gray-300"
           />
