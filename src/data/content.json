@@ -14,6 +14,42 @@
     "ARM/Bicep",
     "CI/CD"
   ],
+  "experience": [
+    {
+      "title": "Lead Azure Solutions Architect",
+      "company": "Calpine",
+      "period": "2022 – Present",
+      "highlights": [
+        "Designed hub-and-spoke network architecture across 20+ subscriptions with automated guardrails.",
+        "Migrated legacy workloads to Azure Kubernetes Service with enterprise App Gateway routing.",
+        "Standardized Terraform modules and CI/CD pipelines to shrink provisioning time from weeks to hours."
+      ]
+    },
+    {
+      "title": "Cloud DevOps Engineer",
+      "company": "XYZ Solutions",
+      "period": "2018 – 2022",
+      "highlights": [
+        "Implemented Azure landing zones with policy-driven governance and cost controls.",
+        "Automated load balancer upgrades with PowerShell runbooks to eliminate maintenance downtime.",
+        "Built observability dashboards combining Azure Monitor and Log Analytics for proactive support."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Master of Science, Computer Science",
+      "institution": "San Jose State University",
+      "year": "2018",
+      "details": "Focus on distributed systems, cloud-native patterns, and secure network design."
+    },
+    {
+      "degree": "Bachelor of Technology, Computer Science",
+      "institution": "Jawaharlal Nehru Technological University",
+      "year": "2015",
+      "details": "Graduated with distinction; led the campus cloud lab initiative."
+    }
+  ],
   "projects": [
     {
       "title": "SPY Options Predictor",
