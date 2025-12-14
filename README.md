@@ -20,6 +20,12 @@ This site is content-driven so you can treat it like a lightweight CMS without t
 - **Blog posts** live in `src/blog/` as Markdown files with front matter. Use the existing posts as templates and include `title`, `date`, `summary`, and optional `tags` metadata. The latest three posts automatically surface on the homepage, and each post gets its own route at `/blog/<slug>`.
 - **Adding new posts**: create a new file like `src/blog/2025-07-new-topic.md` with front matter, and the site will include it without code changes. Ensure dates are ISO-friendly (e.g., `2025-07-01`) so sorting works correctly.
 
+### Admin console and login
+
+- Open `/admin` to reach the admin console. You must log in with the passcode defined in `REACT_APP_ADMIN_PASSCODE` (defaults to `admin123`).
+- After login, use the built-in editor to update `content.json`, validate the JSON, and download the updated file. Replace `src/data/content.json` with the downloaded version before committing.
+- The admin console also lists every Markdown blog post in `src/blog/` so you can see which slugs, dates, and tags are live.
+
 After editing content, run `npm start` for local preview or commit and push to trigger the CI build to verify the output.
 
 ## Pushing this repo to GitHub from the container
