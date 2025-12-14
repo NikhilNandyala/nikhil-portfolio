@@ -5,6 +5,7 @@ This repository powers the **nikhilnandyala | Portfolio** single-page app. The s
 ## Deploying with Vercel
 
 The project is set up to deploy through Vercel, so you can rely on Vercel’s preview and production builds instead of GitHub Actions:
+ 
 2. Push your branch to the remote—Vercel will automatically build previews for each branch or pull request.
 3. Merge to your main branch to trigger the production deployment. Use the Vercel dashboard to monitor build logs and view the live site.
 4. Route protection: `vercel.json` rewrites all routes (including `/admin` and blog slugs) back to `index.html` so the SPA router can load the Admin console without 404s on Vercel.
