@@ -23,10 +23,9 @@ This site is content-driven so you can treat it like a lightweight CMS without t
 
 ### Admin console and login
 
-- Open `/admin` to reach the admin console. You must log in with the passcode defined in `REACT_APP_ADMIN_PASSCODE` (defaults to `admin123`). Set this environment variable in Vercel so previews and production use your chosen passcode.
+- The admin console is available directly at `/admin`, even though the public portfolio hides all admin navigation links. Log in with the passcode defined in `REACT_APP_ADMIN_PASSCODE` (defaults to `admin123`). Set this environment variable in Vercel so previews and production use your chosen passcode.
 - After login, use the built-in editor to update `content.json`, validate the JSON, and download the updated file. Replace `src/data/content.json` with the downloaded version before committing.
 - The admin console also lists every Markdown blog post in `src/blog/` so you can see which slugs, dates, and tags are live.
-- An "Admin" link is visible on the homepage navigation and in the CMS call-to-action card so you can reach the dashboard from the live site.
 
 After editing content, run `npm start` for local preview or push to your Vercel-connected branch to validate changes in a preview build.
 
