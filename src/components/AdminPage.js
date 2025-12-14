@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import content from "../data/content.json";
 import { getAllPosts } from "../data/blogService";
 
+ 
 const DEFAULT_PASSCODE = process.env.REACT_APP_ADMIN_PASSCODE || "admin123";
 
 function downloadJsonFile(data) {
@@ -18,6 +19,7 @@ export default function AdminPage() {
   const [isAuthenticated, setIsAuthenticated] = useState(
     () => window.localStorage.getItem("adminAuthed") === "true"
   );
+ 
   const [passcode, setPasscode] = useState("");
   const [rawContent, setRawContent] = useState(() => JSON.stringify(content, null, 2));
   const [status, setStatus] = useState("");
@@ -33,12 +35,7 @@ export default function AdminPage() {
 
   const handleLogin = (event) => {
     event.preventDefault();
-    if (passcode.trim() === DEFAULT_PASSCODE) {
-      setIsAuthenticated(true);
-      setPasscode("");
-      setError("");
-    } else {
-      setError("Invalid admin passcode. Please try again.");
+  
     }
   };
 
@@ -79,9 +76,7 @@ export default function AdminPage() {
         <header className="flex flex-col gap-3 mb-8">
           <h1 className="text-3xl font-bold">Admin Console</h1>
           <p className="text-gray-600">
-            Use this page to log in and manage the site content safely. The default passcode is
-            set via <code className="bg-gray-200 px-1 rounded">REACT_APP_ADMIN_PASSCODE</code> or falls back
-            to <span className="font-mono">admin123</span>.
+ 
           </p>
         </header>
 
@@ -89,6 +84,7 @@ export default function AdminPage() {
           <div className="bg-white shadow rounded-lg p-6 max-w-xl">
             <form className="space-y-4" onSubmit={handleLogin}>
               <div>
+ 
                 <label className="block text-sm font-medium text-gray-700 mb-1" htmlFor="admin-passcode">
                   Admin Passcode
                 </label>
@@ -99,6 +95,7 @@ export default function AdminPage() {
                   value={passcode}
                   onChange={(e) => setPasscode(e.target.value)}
                   placeholder="Enter the configured passcode"
+ 
                 />
               </div>
               {error && <p className="text-sm text-red-600">{error}</p>}

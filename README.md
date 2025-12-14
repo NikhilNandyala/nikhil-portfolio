@@ -5,8 +5,6 @@ This repository powers the **nikhilnandyala | Portfolio** single-page app. The s
 ## Deploying with Vercel
 
 The project is set up to deploy through Vercel, so you can rely on Vercel’s preview and production builds instead of GitHub Actions:
-
-1. Connect the repository to Vercel and configure your environment variables (such as `REACT_APP_ADMIN_PASSCODE`).
 2. Push your branch to the remote—Vercel will automatically build previews for each branch or pull request.
 3. Merge to your main branch to trigger the production deployment. Use the Vercel dashboard to monitor build logs and view the live site.
 4. Route protection: `vercel.json` rewrites all routes (including `/admin` and blog slugs) back to `index.html` so the SPA router can load the Admin console without 404s on Vercel.
@@ -18,60 +16,12 @@ If you need to validate locally before a push, run `npm run build` to generate t
 This site is content-driven so you can treat it like a lightweight CMS without touching React components:
 
 - **Profile, experience, education, skills, and testimonials** are stored in `src/data/content.json`. Edit the JSON fields to update your name, roles, dates, and bullet points.
-- **Blog posts** live in `src/blog/` as Markdown files with front matter. Use the existing posts as templates and include `title`, `date`, `summary`, and optional `tags` metadata. The latest three posts automatically surface on the homepage, and each post gets its own route at `/blog/<slug>`.
-- **Adding new posts**: create a new file like `src/blog/2025-07-new-topic.md` with front matter, and the site will include it without code changes. Ensure dates are ISO-friendly (e.g., `2025-07-01`) so sorting works correctly.
-
-### Admin console and login
-
-- The admin console is available directly at `/admin`, even though the public portfolio hides all admin navigation links. Log in with the passcode defined in `REACT_APP_ADMIN_PASSCODE` (defaults to `admin123`). Set this environment variable in Vercel so previews and production use your chosen passcode.
+ 
 - After login, use the built-in editor to update `content.json`, validate the JSON, and download the updated file. Replace `src/data/content.json` with the downloaded version before committing.
 - The admin console also lists every Markdown blog post in `src/blog/` so you can see which slugs, dates, and tags are live.
 
 After editing content, run `npm start` for local preview or push to your Vercel-connected branch to validate changes in a preview build.
-
-## Checking the site after pushing to GitHub
-
-Pushing this repository to GitHub will automatically run a CI workflow that installs dependencies, runs the tests, builds the production bundle, and uploads the `build` folder as an artifact. To verify the site after a push:
-
-1. Push the branch to GitHub.
-2. Open the **CI** workflow run for that commit.
-3. Download the `build-artifact` to review the static site locally or publish it to GitHub Pages or any static host.
-
-The same steps can be used to validate PRs before merging.
-
-## Updating resume and blog content
-
-This site is content-driven so you can treat it like a lightweight CMS without touching React components:
-
-- **Profile, experience, education, skills, and testimonials** are stored in `src/data/content.json`. Edit the JSON fields to update your name, roles, dates, and bullet points.
-- **Blog posts** live in `src/blog/` as Markdown files with front matter. Use the existing posts as templates and include `title`, `date`, `summary`, and optional `tags` metadata. The latest three posts automatically surface on the homepage, and each post gets its own route at `/blog/<slug>`.
-- **Adding new posts**: create a new file like `src/blog/2025-07-new-topic.md` with front matter, and the site will include it without code changes. Ensure dates are ISO-friendly (e.g., `2025-07-01`) so sorting works correctly.
-
-### Admin console and login
-
-- Open `/admin` to reach the admin console. You must log in with the passcode defined in `REACT_APP_ADMIN_PASSCODE` (defaults to `admin123`).
-- After login, use the built-in editor to update `content.json`, validate the JSON, and download the updated file. Replace `src/data/content.json` with the downloaded version before committing.
-- The admin console also lists every Markdown blog post in `src/blog/` so you can see which slugs, dates, and tags are live.
-
-After editing content, run `npm start` for local preview or commit and push to trigger the CI build to verify the output.
-
-## Pushing this repo to GitHub from the container
-
-If you want to push the current branch from this environment to your GitHub repository:
-
-1. Add your GitHub remote once (replace placeholders):
-   ```bash
-   git remote add origin https://github.com/<your-username>/<your-repo>.git
-   ```
-2. Confirm the branch you want to push (for example, `work`):
-   ```bash
-   git branch --show-current
-   ```
-3. Push the branch to GitHub:
-   ```bash
-   git push -u origin <branch-name>
-   ```
-4. Open the **Actions** tab in your repository to watch the CI workflow run. Download the uploaded `build-artifact` to preview the static site locally or publish it to a host like GitHub Pages.
+ 
 
 ## Available Scripts
 
