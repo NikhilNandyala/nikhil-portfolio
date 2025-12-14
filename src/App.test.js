@@ -21,5 +21,5 @@ test("renders profile and navigation", () => {
   expect(screen.getByText(/Cloud Solutions Architect/i)).toBeInTheDocument();
   expect(screen.getByText(/About Me/i)).toBeInTheDocument();
   expect(screen.getByText(/Latest Blog Posts/i)).toBeInTheDocument();
-  expect(screen.getAllByRole("link", { name: /admin/i }).length).toBeGreaterThan(0);
+  expect(screen.queryByRole("link", { name: /admin/i })).not.toBeInTheDocument();
 });

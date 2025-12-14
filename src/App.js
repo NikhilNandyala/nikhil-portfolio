@@ -25,12 +25,6 @@ function HomePage() {
             >
               Reach Out
             </a>
-            <Link
-              to="/admin"
-              className="px-6 py-2 bg-white text-blue-700 rounded-full hover:bg-blue-50 border border-blue-200 text-center"
-            >
-              CMS Admin
-            </Link>
           </div>
         </header>
 
@@ -43,9 +37,6 @@ function HomePage() {
             <a href="#projects" className="hover:text-blue-600">Projects</a>
             <a href="#testimonials" className="hover:text-blue-600">Testimonials</a>
             <a href="#contact" className="hover:text-blue-600">Contact</a>
-            <Link to="/admin" className="hover:text-blue-600">
-              Admin
-            </Link>
           </div>
         </nav>
 
@@ -160,21 +151,6 @@ function HomePage() {
             )}
           </section>
 
-          <section id="admin" className="mb-12">
-            <div className="bg-white bg-opacity-90 text-gray-900 p-6 rounded-xl shadow-md">
-              <h2 className="text-2xl font-semibold mb-2">Admin console</h2>
-              <p className="text-sm text-gray-700">
-                Manage the site content from a password-protected dashboard. Use the admin login to update resume details,
-                validate <code>content.json</code>, and review published blog posts without touching code.
-              </p>
-              <Link
-                to="/admin"
-                className="inline-block mt-4 px-5 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700"
-              >
-                Go to admin login
-              </Link>
-            </div>
-          </section>
         </main>
 
         <footer id="contact" className="text-center text-sm text-gray-300 py-8">
