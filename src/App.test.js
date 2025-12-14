@@ -1,4 +1,4 @@
-import React from "react";
+ import React from "react";
 import { render, screen } from "@testing-library/react";
 import App from "./App";
 
@@ -13,6 +13,7 @@ jest.mock("./lib/router", () => ({
   ),
   useParams: () => ({ slug: "" }),
 }));
+
 jest.mock("./lib/markdown", () => (props) => <div>{props.children}</div>);
 
 test("renders profile and navigation", () => {
@@ -40,7 +41,10 @@ test("shows resume sections and hides CMS links", () => {
 test("shows personal branding without exposing admin entry points", () => {
   render(<App />);
 
-  expect(screen.getAllByText(/Venkata Nikhil Nandyala/i).length).toBeGreaterThan(0);
+  expect(
+    screen.getAllByText(/Venkata Nikhil Nandyala/i).length
+  ).toBeGreaterThan(0);
+
   expect(screen.getByText(/Cloud Solutions Architect/i)).toBeInTheDocument();
   expect(screen.queryByRole("link", { name: /admin/i })).not.toBeInTheDocument();
 });
