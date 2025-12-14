@@ -6,8 +6,8 @@ jest.mock("./lib/router", () => ({
   BrowserRouter: ({ children }) => <div>{children}</div>,
   Routes: ({ children }) => <div>{children}</div>,
   Route: ({ element }) => element,
-  Link: ({ children, to, ...props }) => (
-    <a href={to} {...props}>
+  Link: ({ children, to, href, ...props }) => (
+    <a href={href ?? to} {...props}>
       {children}
     </a>
   ),
