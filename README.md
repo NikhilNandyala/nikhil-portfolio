@@ -1,6 +1,33 @@
-# Getting Started with Create React App
+# Portfolio overview
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This repository powers the **nikhilnandyala | Portfolio** single-page app. The site presents a professional resume-style profile, highlights recent blog posts, and keeps a hidden admin console at `/admin` for authenticated edits. The public navigation keeps the CMS entry point out of sight while still allowing direct access when you know the URL.
+
+## Deploying with Vercel
+
+The project is set up to deploy through Vercel, so you can rely on Vercel’s preview and production builds instead of GitHub Actions:
+
+1. Connect the repository to Vercel and configure your environment variables (such as `REACT_APP_ADMIN_PASSCODE`).
+2. Push your branch to the remote—Vercel will automatically build previews for each branch or pull request.
+3. Merge to your main branch to trigger the production deployment. Use the Vercel dashboard to monitor build logs and view the live site.
+4. Route protection: `vercel.json` rewrites all routes (including `/admin` and blog slugs) back to `index.html` so the SPA router can load the Admin console without 404s on Vercel.
+
+If you need to validate locally before a push, run `npm run build` to generate the production bundle and serve the `build` folder with any static file server.
+
+## Updating resume and blog content
+
+This site is content-driven so you can treat it like a lightweight CMS without touching React components:
+
+- **Profile, experience, education, skills, and testimonials** are stored in `src/data/content.json`. Edit the JSON fields to update your name, roles, dates, and bullet points.
+- **Blog posts** live in `src/blog/` as Markdown files with front matter. Use the existing posts as templates and include `title`, `date`, `summary`, and optional `tags` metadata. The latest three posts automatically surface on the homepage, and each post gets its own route at `/blog/<slug>`.
+- **Adding new posts**: create a new file like `src/blog/2025-07-new-topic.md` with front matter, and the site will include it without code changes. Ensure dates are ISO-friendly (e.g., `2025-07-01`) so sorting works correctly.
+
+### Admin console and login
+
+- The admin console is available directly at `/admin`, even though the public portfolio hides all admin navigation links. Log in with the passcode defined in `REACT_APP_ADMIN_PASSCODE` (defaults to `admin123`). Set this environment variable in Vercel so previews and production use your chosen passcode.
+- After login, use the built-in editor to update `content.json`, validate the JSON, and download the updated file. Replace `src/data/content.json` with the downloaded version before committing.
+- The admin console also lists every Markdown blog post in `src/blog/` so you can see which slugs, dates, and tags are live.
+
+After editing content, run `npm start` for local preview or push to your Vercel-connected branch to validate changes in a preview build.
 
 ## Checking the site after pushing to GitHub
 
