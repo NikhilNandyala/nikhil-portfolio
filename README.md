@@ -1,12 +1,12 @@
-# Getting Started with Create React App
+# Portfolio overview
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This repository powers the **nikhilnandyala | Portfolio** single-page app. The site presents a professional resume-style profile, highlights recent blog posts, and keeps a hidden admin console at `/admin` for authenticated edits. The public navigation keeps the CMS entry point out of sight while still allowing direct access when you know the URL.
 
 ## Deploying with Vercel
 
-This project is set up to deploy through Vercel, so you can rely on Vercel’s preview and production builds instead of GitHub Actions:
+The project is set up to deploy through Vercel, so you can rely on Vercel’s preview and production builds instead of GitHub Actions:
 
-1. Connect the repository to Vercel if you haven’t already and configure your environment variables (such as `REACT_APP_ADMIN_PASSCODE`).
+1. Connect the repository to Vercel and configure your environment variables (such as `REACT_APP_ADMIN_PASSCODE`).
 2. Push your branch to the remote—Vercel will automatically build previews for each branch or pull request.
 3. Merge to your main branch to trigger the production deployment. Use the Vercel dashboard to monitor build logs and view the live site.
 4. Route protection: `vercel.json` rewrites all routes (including `/admin` and blog slugs) back to `index.html` so the SPA router can load the Admin console without 404s on Vercel.
