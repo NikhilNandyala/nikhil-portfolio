@@ -9,20 +9,16 @@ function HomePage() {
   const blogPosts = getAllPosts();
 
   return (
-    <div
-      className="min-h-screen bg-cover bg-center bg-no-repeat bg-fixed"
-      style={{ backgroundImage: "url('/pexels-goumbik-574071.jpg')" }}
-    >
-      <div className="bg-black bg-opacity-60 min-h-screen">
-        <header className="flex flex-col items-center justify-center py-16 shadow">
-          <img
-            src="/profile.jpg"
-            alt={content.name}
-            className="w-32 h-32 rounded-full object-cover border-4 border-gray-300"
-          />
-          <h1 className="text-3xl font-bold mt-4 text-white">{content.name}</h1>
-          <p className="text-lg text-gray-300">{content.title}</p>
-          <div className="flex flex-col sm:flex-row gap-3 mt-4">
+    <div className="min-h-screen bg-gradient-to-b from-slate-900 via-slate-900 to-slate-950">
+      <div className="min-h-screen">
+        <header className="flex flex-col items-center justify-center py-16 px-6 text-center bg-slate-900/80">
+          <p className="text-xs uppercase tracking-[0.3em] text-blue-200">Portfolio</p>
+          <h1 className="text-4xl font-bold mt-3 text-white">{content.name}</h1>
+          <p className="text-lg text-blue-100 mt-2">{content.title}</p>
+          <p className="mt-4 max-w-2xl text-gray-200 leading-relaxed">
+            {content.about}
+          </p>
+          <div className="flex flex-col sm:flex-row gap-3 mt-6">
             <a
               href={`mailto:${content.email}`}
               className="px-6 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 text-center"
