@@ -33,5 +33,14 @@ test("shows resume sections and hides CMS links", () => {
   expect(screen.getByRole("link", { name: /skills/i })).toHaveAttribute("href", "#skills");
   expect(screen.getByRole("link", { name: /projects/i })).toHaveAttribute("href", "#projects");
   expect(screen.getByRole("link", { name: /testimonials/i })).toHaveAttribute("href", "#testimonials");
+  expect(screen.getByRole("link", { name: /contact/i })).toHaveAttribute("href", "#contact");
+  expect(screen.queryByRole("link", { name: /admin/i })).not.toBeInTheDocument();
+});
+
+test("shows personal branding without exposing admin entry points", () => {
+  render(<App />);
+
+  expect(screen.getAllByText(/Venkata Nikhil Nandyala/i).length).toBeGreaterThan(0);
+  expect(screen.getByText(/Cloud Solutions Architect/i)).toBeInTheDocument();
   expect(screen.queryByRole("link", { name: /admin/i })).not.toBeInTheDocument();
 });
