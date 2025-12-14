@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import content from "../data/content.json";
 import { getAllPosts } from "../data/blogService";
 
-const DEFAULT_USERNAME = process.env.REACT_APP_ADMIN_USERNAME || "admin";
+ 
 const DEFAULT_PASSCODE = process.env.REACT_APP_ADMIN_PASSCODE || "admin123";
 
 function downloadJsonFile(data) {
@@ -19,7 +19,7 @@ export default function AdminPage() {
   const [isAuthenticated, setIsAuthenticated] = useState(
     () => window.localStorage.getItem("adminAuthed") === "true"
   );
-  const [username, setUsername] = useState("");
+ 
   const [passcode, setPasscode] = useState("");
   const [rawContent, setRawContent] = useState(() => JSON.stringify(content, null, 2));
   const [status, setStatus] = useState("");
@@ -35,13 +35,7 @@ export default function AdminPage() {
 
   const handleLogin = (event) => {
     event.preventDefault();
-    if (username.trim() === DEFAULT_USERNAME && passcode.trim() === DEFAULT_PASSCODE) {
-      setIsAuthenticated(true);
-      setUsername("");
-      setPasscode("");
-      setError("");
-    } else {
-      setError("Invalid admin credentials. Please try again.");
+  
     }
   };
 
@@ -82,11 +76,7 @@ export default function AdminPage() {
         <header className="flex flex-col gap-3 mb-8">
           <h1 className="text-3xl font-bold">Admin Console</h1>
           <p className="text-gray-600">
-            Use this page to log in and manage the site content safely. Configure your own login by setting
-            <code className="bg-gray-200 px-1 rounded ml-1">REACT_APP_ADMIN_USERNAME</code> and
-            <code className="bg-gray-200 px-1 rounded ml-1">REACT_APP_ADMIN_PASSCODE</code> in your environment.
-            If not provided, the defaults remain <span className="font-mono">admin</span> /
-            <span className="font-mono">admin123</span>.
+ 
           </p>
         </header>
 
@@ -94,20 +84,7 @@ export default function AdminPage() {
           <div className="bg-white shadow rounded-lg p-6 max-w-xl">
             <form className="space-y-4" onSubmit={handleLogin}>
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1" htmlFor="admin-username">
-                  Admin Username
-                </label>
-                <input
-                  id="admin-username"
-                  type="text"
-                  className="w-full rounded border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  value={username}
-                  onChange={(e) => setUsername(e.target.value)}
-                  placeholder="Enter the configured username"
-                  autoComplete="username"
-                />
-              </div>
-              <div>
+ 
                 <label className="block text-sm font-medium text-gray-700 mb-1" htmlFor="admin-passcode">
                   Admin Passcode
                 </label>
@@ -118,7 +95,7 @@ export default function AdminPage() {
                   value={passcode}
                   onChange={(e) => setPasscode(e.target.value)}
                   placeholder="Enter the configured passcode"
-                  autoComplete="current-password"
+ 
                 />
               </div>
               {error && <p className="text-sm text-red-600">{error}</p>}
