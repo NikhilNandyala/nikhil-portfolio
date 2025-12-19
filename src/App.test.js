@@ -19,8 +19,8 @@ jest.mock("./lib/markdown", () => (props) => <div>{props.children}</div>);
 test("shows maintenance notice with contact CTA", () => {
   render(<App />);
 
-  expect(screen.getByText(/we'll be right back/i)).toBeInTheDocument();
-  expect(screen.getByText(/refreshing this portfolio/i)).toBeInTheDocument();
+  expect(screen.getByText(/site upgrade in progress/i)).toBeInTheDocument();
+  expect(screen.getByText(/refreshing this portfolio with new capabilities/i)).toBeInTheDocument();
   const emailCta = screen.getByRole("link", { name: new RegExp(`Email ${content.name}`, "i") });
   expect(emailCta).toHaveAttribute("href", `mailto:${content.email}`);
 });
