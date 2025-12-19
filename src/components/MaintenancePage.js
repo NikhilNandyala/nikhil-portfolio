@@ -22,7 +22,6 @@ export default function MaintenancePage() {
         </div>
         <div className="text-xs text-gray-400 mt-6 space-y-1">
           <p>Public pages are temporarily offline while the upgrade completes.</p>
-          <p>Admins can still access the console at /admin to manage content during maintenance.</p>
         </div>
       </div>
     </div>
