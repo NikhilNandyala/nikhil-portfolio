@@ -2,6 +2,15 @@
 
 This repository powers the **nikhilnandyala | Portfolio** single-page app. The site presents a professional resume-style profile, highlights recent blog posts, and keeps a hidden admin console at `/admin` for authenticated edits. The public navigation keeps the CMS entry point out of sight while still allowing direct access when you know the URL.
 
+## Maintenance mode
+
+The public root (`/`) currently serves a maintenance page while the portfolio is being refreshed. You can still:
+
+- Reach the admin console at `/admin` to update content and blog Markdown files.
+- View the full portfolio experience at `/portfolio` during validation or review.
+
+To turn off maintenance mode later, point the root route back to the portfolio home in `src/App.js`.
+
 ## Deploying with Vercel
 
 The project is set up to deploy through Vercel, so you can rely on Vercel’s preview and production builds instead of GitHub Actions:

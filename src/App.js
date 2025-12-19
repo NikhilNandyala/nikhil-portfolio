@@ -4,6 +4,7 @@ import content from "./data/content.json";
 import BlogPost from "./components/BlogPost";
 import { getAllPosts } from "./data/blogService";
 import AdminPage from "./components/AdminPage";
+import MaintenancePage from "./components/MaintenancePage";
 
 function HomePage() {
   const blogPosts = getAllPosts();
@@ -168,7 +169,8 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route path="/" element={<MaintenancePage />} />
+        <Route path="/portfolio" element={<HomePage />} />
         <Route path="/blog/:slug" element={<BlogPost />} />
         <Route path="/admin" element={<AdminPage />} />
       </Routes>
